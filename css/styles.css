@@ -401,3 +401,64 @@ input {
   letter-spacing: 0.02em;
   width: 288px;
 }
+
+@media screen and (min-width: 768px) {
+  .ul-advantages {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .title-advantages {
+    text-align: left;
+  }
+
+  .item-advantages {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .text-advantages {
+    width: 356px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .ul-advantages {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 24px;
+    justify-content: baseline;
+    align-items: center;
+  }
+
+  .container-icon-advantages {
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background: #f4f4fd;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+  }
+
+  .text-advantages {
+    width: 264px;
+  }
+
+  .title-advantages {
+    font-size: 20px;
+
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .item-advantages {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+}
