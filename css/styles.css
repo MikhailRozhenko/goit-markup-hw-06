@@ -582,15 +582,16 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-  .section-dream-team {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-
   .ul-dream-team {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .ul-dream-team {
+    flex-wrap: nowrap;
   }
 }
