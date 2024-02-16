@@ -509,7 +509,7 @@ input {
 .ul-dream-team {
   display: flex;
   flex-direction: column;
-  row-gap: 72px;
+  gap: 72px;
   justify-content: center;
   align-items: center;
 }
@@ -583,13 +583,13 @@ input {
 
 @media screen and (min-width: 768px) {
   .section-dream-team {
-    padding-left: 108px;
-    padding-right: 108px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .ul-dream-team {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
   }
