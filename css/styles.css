@@ -399,13 +399,11 @@ input {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  width: 288px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .ul-advantages {
-    padding-top: 96px;
-    padding-bottom: 96px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -422,17 +420,48 @@ input {
   }
 
   .text-advantages {
-    width: 356px;
+    max-width: 100%;
   }
 }
 
 @media screen and (min-width: 1158px) {
+  .ul-advantages .title-advantages {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .ul-advantages .text-advantages {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   .ul-advantages {
     display: flex;
     flex-wrap: nowrap;
-    column-gap: 24px;
-    justify-content: baseline;
-    align-items: center;
+    gap: 24px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .item-advantages {
+    width: calc((100% - 72px) / 4);
   }
 
   .container-icon-advantages {
@@ -445,20 +474,5 @@ input {
     align-items: center;
     justify-content: center;
     height: 112px;
-  }
-
-  .text-advantages {
-    width: 264px;
-  }
-
-  .title-advantages {
-    font-size: 20px;
-
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-  }
-
-  .item-advantages {
-    flex-basis: calc((100% - 72px) / 4);
   }
 }
