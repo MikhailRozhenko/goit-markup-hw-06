@@ -922,10 +922,320 @@ input {
   }
 
   .input-foot {
-    width: 264px;
+    width: 288px;
   }
 
   .main-content-footer {
     margin-right: 24px;
+  }
+}
+
+/* modal-window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fcfcfc;
+  max-width: 288px;
+
+  flex-shrink: 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-closed-form {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #e7e9fc;
+  padding: 0;
+}
+
+.button-closed-form:hover,
+.button-closed-form:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.icon-closed-form {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-closed-form:hover .icon-closed-form,
+.button-closed-form:focus .icon-closed-form {
+  fill: #ffffff;
+}
+
+.text-modal {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+}
+
+.name-modal {
+  color: #8e8f99;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  line-height: 1.17;
+  width: 231px;
+}
+
+.name-modal:last-child {
+  margin-bottom: 0px;
+}
+
+.input-name-modal {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-container-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.name-container-modal:last-child {
+  margin-bottom: 0px;
+}
+
+.icon-modal {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-name-modal:focus-within + .icon-modal {
+  fill: #4d5ae5;
+}
+
+.input-name-modal:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.wrap-modal {
+  position: relative;
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-comment {
+  position: relative;
+  max-width: 256px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-comment:focus {
+  border-color: #4d5ae5;
+}
+
+textarea::placeholder {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  transform: translateX(16px);
+  transform: translateY(8px);
+  color: rgba(46, 47, 66, 0.4);
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16px;
+  letter-spacing: 0.04em;
+}
+
+.modal-form-span {
+  color: #4d5ae5;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+}
+
+.textareacontainer {
+  margin-bottom: 16px;
+}
+
+.checkbox-modal {
+  width: 16px;
+  height: 16px;
+}
+
+.submit-type-button {
+  border-radius: 4px;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  min-height: 56px;
+  min-width: 169px;
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-bottom: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-type-button:hover,
+.submit-type-button:focus {
+  background-color: #404bbf;
+}
+
+.text-button-form {
+  color: #fff;
+  text-align: center;
+
+  font-size: 16px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.checkbox-container-form {
+  margin-bottom: 24px;
+}
+
+.check-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  padding: 4px 3px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  margin-right: 8px;
+}
+
+.link-modal {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+input:checked + .name-modal > .check-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+  .name-modal {
+    color: #8e8f99;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    line-height: 1.17;
+    max-width: 338px;
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fcfcfc;
+    max-width: 408px;
+
+    flex-shrink: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+      0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-comment {
+    max-width: 360px;
+  }
+
+  .text-modal {
+    width: 360px;
   }
 }
