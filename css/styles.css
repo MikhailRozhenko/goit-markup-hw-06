@@ -262,7 +262,7 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpeg);
+    url(../images/people-office-mobile.jpg);
   max-width: 100%;
 
   background-size: cover;
@@ -333,6 +333,11 @@ input {
   .section-button {
     padding-top: 112px;
     padding-bottom: 112px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-planchet.jpg);
   }
 
   .page-title {
@@ -350,8 +355,23 @@ input {
 
 @media screen and (min-width: 1158px) {
   .section-button {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpeg);
+    max-width: 1440px;
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
     padding-top: 188px;
     padding-bottom: 188px;
+    margin: 0 auto;
   }
 
   .page-title {
