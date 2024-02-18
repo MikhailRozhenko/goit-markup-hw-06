@@ -1108,7 +1108,8 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fcfcfc;
-  max-width: 288px;
+  width: 288px;
+  min-height: 623px;
 
   flex-shrink: 0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -1169,12 +1170,11 @@ input {
 
   font-size: 12px;
 
-  font-weight: 400;
-
   letter-spacing: 0.04em;
   margin-bottom: 4px;
   line-height: 1.17;
   display: flex;
+  align-items: center;
 }
 
 .name-modal:last-child {
@@ -1335,6 +1335,7 @@ textarea::placeholder {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   fill: transparent;
   margin-right: 8px;
   flex-shrink: 0;
@@ -1386,7 +1387,7 @@ input:checked + .name-modal > .check-span {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fcfcfc;
-    max-width: 408px;
+    max-width: 288px;
 
     flex-shrink: 0;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
