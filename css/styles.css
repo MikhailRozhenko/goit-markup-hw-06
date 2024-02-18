@@ -1265,8 +1265,6 @@ textarea::placeholder {
 
 .checkbox-container-form {
   margin-bottom: 24px;
-  /* display: flex; */
-  /* align-items: center; */
 }
 
 .check-span {
@@ -1361,7 +1359,9 @@ input:checked + .name-modal > .check-span {
     left: 0;
     background-color: #fff;
     z-index: 999;
-    /* padding-bottom: 40px; */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 
   .mobile-menu-nav {
@@ -1438,6 +1438,12 @@ input:checked + .name-modal > .check-span {
     column-gap: 40px;
     margin-bottom: 40px;
   }
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 @media screen and (min-width: 768px) {
