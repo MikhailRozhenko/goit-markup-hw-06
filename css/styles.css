@@ -281,6 +281,19 @@ input {
   align-items: center;
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-button {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mobile-2x.jpg);
+  }
+}
+
 .page-title {
   color: var(--WHITE, #fff);
   text-align: center;
@@ -340,6 +353,19 @@ input {
       url(../images/people-office-planchet.jpg);
   }
 
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-button {
+      background-color: #2e2f42;
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-planchet-2x.jpg);
+    }
+  }
+
   .page-title {
     width: 496px;
 
@@ -359,7 +385,7 @@ input {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpeg);
+      url(../images/people-office.jpg);
     max-width: 1440px;
 
     padding-top: 188px;
@@ -368,6 +394,19 @@ input {
 
   .page-title {
     margin-bottom: 48px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-button {
+      background-color: #2e2f42;
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-2x.jpg);
+    }
   }
 }
 
