@@ -1109,13 +1109,12 @@ input {
   transform: translate(-50%, -50%);
   background-color: #fcfcfc;
   width: 288px;
-  min-height: 623px;
 
   flex-shrink: 0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1378,7 +1377,6 @@ input:checked + .name-modal > .check-span {
     letter-spacing: 0.04em;
     margin-bottom: 4px;
     line-height: 1.17;
-    max-width: 338px;
   }
 
   .modal {
@@ -1387,7 +1385,7 @@ input:checked + .name-modal > .check-span {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fcfcfc;
-    max-width: 288px;
+    width: 408px;
 
     flex-shrink: 0;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
