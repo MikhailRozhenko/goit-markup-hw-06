@@ -1353,7 +1353,7 @@ input:checked + .name-modal > .check-span {
 }
 
 /* mobile menu */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .mobile-menu {
     width: 100vh;
     height: 100vh;
